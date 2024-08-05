@@ -1,21 +1,13 @@
 <!DOCTYPE html>
-{% with messages = get_flashed_messages() %}
-  {% if messages %}
-    <ul class=flashes>
-    {% for message in messages %}
-      <li>{{ message }}</li>
-    {% endfor %}
-    </ul>
-  {% endif %}
-{% endwith %}
+<link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
 <html>
     <head>
         <title>My App</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     </head>
     <body>
         <div class="container">
             {% block content %}{% endblock %}
+            <img src="{{ url_for('static', filename='images/logo-black.png') }}" alt="My App">
         </div>
     </body>
 </html>
