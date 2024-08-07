@@ -1,12 +1,133 @@
 <!DOCTYPE html>
-<link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+<link
+  href="{{ url_for('static', filename='css/main.css') }}"
+  rel="stylesheet"
+/>
 <html>
-    <head>
-        <title>My App</title>
-    </head>
-    <body>
-        <div class="container">
-            {% block content %}{% endblock %}
+  <head>
+    <title>My App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navigation">
+        <div class="top-bar">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 189 31">
+              <defs>
+                <path id="a" d="M0 0h5.093v23.02H0z" />
+              </defs>
+              <g fill="none" fillRule="evenodd">
+                <path d="M168.631 0v31V0Z" />
+                <path
+                  d="M15.434.002a15.44 15.44 0 0 0-7.62 2.01A1.927 1.927 0 0 0 9.717 5.36a11.587 11.587 0 0 1 5.716-1.507c6.385 0 11.58 5.195 11.58 11.58v13.64a1.926 1.926 0 1 0 3.851 0V15.434c.003-8.51-6.92-15.433-15.43-15.433"
+                />
+                <g transform="translate(0 7.98)">
+                  <path
+                    d="M3.974.178a1.929 1.929 0 0 0-2.556.94A15.326 15.326 0 0 0 0 7.587v13.508a1.926 1.926 0 0 0 3.852 0V7.587c0-1.694.357-3.327 1.062-4.852a1.923 1.923 0 0 0-.94-2.557"
+                    mask="url(#b)"
+                  />
+                </g>
+                <path
+                  d="M81.12 17.832c-.374 0-.75.11-1.08.34-4.085 2.844-5.99 6.32-5.99 10.934a1.894 1.894 0 0 0 3.788 0c0-3.4 1.265-5.668 4.365-7.826a1.895 1.895 0 0 0-1.083-3.448M86.086 16.022l5.938 2.453c7.998 3.323 9.677 6.627 9.697 10.559.006 1.029.798 1.93 1.828 1.963a1.893 1.893 0 0 0 1.959-1.892c0-6.085-3.258-10.203-10.83-13.606 7.549-3.392 10.81-7.496 10.83-13.548.002-.968-.71-1.83-1.674-1.938a1.894 1.894 0 0 0-2.113 1.881c0 1.96-.403 3.763-1.782 5.49-.876 1.094-4.44 5.341-10.16 5.341s-9.201-4.248-10.076-5.343c-1.366-1.708-1.856-3.49-1.865-5.426C77.834.93 77.035.036 76.01.001a1.893 1.893 0 0 0-1.96 1.892c0 6.4 3.6 10.625 12.036 14.13M120.216 10.178v4.395h-3.994v-4.395h-1.996v10.646h1.996v-4.427h3.994v4.427h1.996V10.178zM128.528 10.178v10.646h7.046v-1.827h-5.05v-2.63h4.536v-1.825h-4.536v-2.54h4.96v-1.824zM145.47 11.85h.183l1.285 4.775h-2.753l1.286-4.775Zm-1.513-1.672-2.933 10.646h2.057l.635-2.372h3.69l.635 2.372h2.057l-2.935-10.646h-3.206ZM155.762 10.178v10.646h6.895v-1.827h-4.899v-8.82zM166.27 10.178v1.824h3.206v8.822h1.996v-8.822h3.207v-1.824zM186.363 10.178v4.395h-3.992v-4.395h-1.997v10.646h1.997v-4.427h3.992v4.427h1.996V10.178zM52.432 0c-8.546 0-15.5 6.954-15.5 15.5S43.886 31 52.432 31c8.545 0 15.499-6.954 15.499-15.5S60.977 0 52.43 0m0 27.146c-6.423 0-11.647-5.224-11.647-11.646 0-6.422 5.224-11.647 11.648-11.647 6.421 0 11.646 5.225 11.646 11.647 0 6.422-5.225 11.646-11.646 11.646"
+                />
+              </g>
+            </svg>
+          </a>
+          <a href="#"> Sign out </a>
         </div>
-    </body>
+        <div class="side-bar">
+          <div>
+            <div>Main</div>
+            <ul>
+              <li>
+                <a href="{{ url_for('main.index') }}">Dashboard</a>
+              </li>
+              <li>
+                <a href="#">Development Objective</a>
+              </li>
+              <li>
+                <a href="#">Initiatives</a>
+              </li>
+              <li>
+                <a href="#">Active Initiative List</a>
+              </li>
+              <li>
+                <a href="#">Program Step Initiatives</a>
+              </li>
+              <li>
+                <a href="#">Solution Initiatives</a>
+              </li>
+              <li>
+                <a href="#">Initiative Roadmap</a>
+              </li>
+              <li>
+                <a href="#">Projects</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div>Priority</div>
+            <ul>
+              <li>
+                <a href="#">Priority Matrix</a>
+              </li>
+              <li>
+                <a href="#">Initiative Priority</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div>Master Data</div>
+            <ul>
+              <li>
+                <a href="#">Markets - new</a>
+              </li>
+              <li>
+                <a href="#">Investment Category</a>
+              </li>
+              <li>
+                <a href="#">Program Step</a>
+              </li>
+              <li>
+                <a href="#">Theme</a>
+              </li>
+              <li>
+                <a href="#">Initiative States</a>
+              </li>
+              <li>
+                <a href="#">Product Owners</a>
+              </li>
+              <li>
+                <a href="#">Developers</a>
+              </li>
+              <li>
+                <a href="#">Developer Skills</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div>Other</div>
+            <ul>
+              <li>
+                <a href="#">Configuration</a>
+              </li>
+              <li>
+                <a href="#">External Pull</a>
+              </li>
+              <li>
+                <a href="#">Google</a>
+              </li>
+              <li>
+                <a href="#">User Management</a>
+              </li>
+              <li>
+                <a href="#">Log</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="content">{% block content %} {% endblock %}</div>
+      </div>
+    </div>
+  </body>
 </html>
