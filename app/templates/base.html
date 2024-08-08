@@ -37,91 +37,177 @@
         </div>
         <div class="side-bar">
           <div>
-            <div>Main</div>
+            <div class="menu-item">
+              <span class="text">Main</span>
+              <span class="arrow">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <g>
+                    <polygon
+                      points="12 12.586 8.707 9.293 7.293 10.707 12 15.414 16.707 10.707 15.293 9.293 12 12.586"
+                    />
+                  </g>
+                </svg>
+              </span>
+            </div>
             <ul>
               <li>
                 <a href="{{ url_for('main.index') }}">Dashboard</a>
               </li>
               <li>
-                <a href="{{ url_for('main.development_objectives')}}">Development Objective</a>
+                <a href="{{ url_for('main.development_objectives')}}"
+                  >Development Objective</a
+                >
               </li>
               <li>
-                <a href="#">Initiatives</a>
+                <a href="{{ url_for('main.initiatives')}}">Initiatives</a>
               </li>
               <li>
-                <a href="#">Active Initiative List</a>
+                <a href="{{ url_for('main.active_initiative_list')}}"
+                  >Active Initiative List</a
+                >
               </li>
               <li>
-                <a href="#">Program Step Initiatives</a>
+                <a href="{{ url_for('main.program_step_initiatives')}}"
+                  >Program Step Initiatives</a
+                >
               </li>
               <li>
-                <a href="#">Solution Initiatives</a>
+                <a href="{{ url_for('main.solution_initiatives')}}"
+                  >Solution Initiatives</a
+                >
               </li>
               <li>
-                <a href="#">Initiative Roadmap</a>
+                <a href="{{ url_for('main.initiative_roadmap')}}"
+                  >Initiative Roadmap</a
+                >
               </li>
               <li>
-                <a href="#">Projects</a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <div>Priority</div>
-            <ul>
-              <li>
-                <a href="#">Priority Matrix</a>
-              </li>
-              <li>
-                <a href="#">Initiative Priority</a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <div>Master Data</div>
-            <ul>
-              <li>
-                <a href="#">Markets - new</a>
-              </li>
-              <li>
-                <a href="#">Investment Category</a>
-              </li>
-              <li>
-                <a href="#">Program Step</a>
-              </li>
-              <li>
-                <a href="#">Theme</a>
-              </li>
-              <li>
-                <a href="#">Initiative States</a>
-              </li>
-              <li>
-                <a href="#">Product Owners</a>
-              </li>
-              <li>
-                <a href="#">Developers</a>
-              </li>
-              <li>
-                <a href="#">Developer Skills</a>
+                <a href="{{ url_for('main.projects')}}">Projects</a>
               </li>
             </ul>
           </div>
           <div>
-            <div>Other</div>
+            <div class="menu-item">
+              <span class="text">Priority</span>
+              <span class="arrow">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <g>
+                    <polygon
+                      points="12 12.586 8.707 9.293 7.293 10.707 12 15.414 16.707 10.707 15.293 9.293 12 12.586"
+                    />
+                  </g>
+                </svg>
+              </span>
+            </div>
             <ul>
               <li>
-                <a href="#">Configuration</a>
+                <a href="{{ url_for('main.priority_matrix')}}"
+                  >Priority Matrix</a
+                >
               </li>
               <li>
-                <a href="#">External Pull</a>
+                <a href="{{ url_for('main.initiative_priority')}}"
+                  >Initiative Priority</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div class="menu-item">
+              <span class="text">Master Data</span>
+              <span class="arrow">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <g>
+                    <polygon
+                      points="12 12.586 8.707 9.293 7.293 10.707 12 15.414 16.707 10.707 15.293 9.293 12 12.586"
+                    />
+                  </g>
+                </svg>
+              </span>
+            </div>
+            <ul>
+              <li>
+                <a href="{{ url_for('main.markets_new')}}">Markets - new</a>
               </li>
               <li>
-                <a href="#">Google</a>
+                <a href="{{ url_for('main.investment_category')}}"
+                  >Investment Category</a
+                >
               </li>
               <li>
-                <a href="#">User Management</a>
+                <a href="{{ url_for('main.program_step')}}">Program Step</a>
               </li>
               <li>
-                <a href="#">Log</a>
+                <a href="{{ url_for('main.theme')}}">Theme</a>
+              </li>
+              <li>
+                <a href="{{ url_for('main.initiative_states')}}"
+                  >Initiative States</a
+                >
+              </li>
+              <li>
+                <a href="{{ url_for('main.product_owners')}}">Product Owners</a>
+              </li>
+              <li>
+                <a href="{{ url_for('main.developers')}}">Developers</a>
+              </li>
+              <li>
+                <a href="{{ url_for('main.developer_skills')}}"
+                  >Developer Skills</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div class="menu-item">
+              <span class="text">Other</span>
+              <span class="arrow">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <g>
+                    <polygon
+                      points="12 12.586 8.707 9.293 7.293 10.707 12 15.414 16.707 10.707 15.293 9.293 12 12.586"
+                    />
+                  </g>
+                </svg>
+              </span>
+            </div>
+            <ul>
+              <li>
+                <a href="{{ url_for('main.configuration')}}">Configuration</a>
+              </li>
+              <li>
+                <a href="{{ url_for('main.external_pull')}}">External Pull</a>
+              </li>
+              <li>
+                <a href="{{ url_for('main.google')}}">Google</a>
+              </li>
+              <li>
+                <a href="{{ url_for('main.user_management')}}"
+                  >User Management</a
+                >
+              </li>
+              <li>
+                <a href="{{ url_for('main.log')}}">Log</a>
               </li>
             </ul>
           </div>
@@ -129,5 +215,6 @@
         <div class="content">{% block content %} {% endblock %}</div>
       </div>
     </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
   </body>
 </html>

@@ -76,6 +76,71 @@ a {
     padding: 25px;
     display: flex;
     flex-direction: column;
+
+    & .menu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+
+      & span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &.text {
+          color: var(--navy-blue);
+          transition: 0.5s;
+
+          &:hover {
+            color: var(--green);
+          }
+        }
+
+        &.arrow {
+          transition: 0.5s;
+          transform: rotate(-90deg);
+        }
+      }
+
+      &.active {
+        & span {
+          &.text {
+            color: var(--aqua-green);
+            text-decoration: underline;
+          }
+          &.arrow {
+            transform: rotate(0deg);
+          }
+        }
+      }
+    }
+
+    & ul {
+      list-style: none;
+      max-height: 0px;
+      height: 100%;
+      overflow: hidden;
+      transition: 0.5s;
+
+      & a {
+        color: var(--green);
+        transition: 0.5s;
+
+        &.active {
+          color: var(--navy-blue);
+          text-decoration: underline;
+        }
+
+        &:hover {
+          color: var(--aqua-green);
+        }
+      }
+
+      &.active {
+        max-height: 500px;
+      }
+    }
   }
 
   & .content {

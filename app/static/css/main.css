@@ -78,6 +78,68 @@ a {
   flex-direction: column;
 }
 
+.navigation .side-bar .menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.navigation .side-bar .menu-item span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigation .side-bar .menu-item span.text {
+  color: var(--navy-blue);
+  transition: 0.5s;
+}
+
+.navigation .side-bar .menu-item span.text:hover {
+  color: var(--green);
+}
+
+.navigation .side-bar .menu-item span.arrow {
+  transition: 0.5s;
+  transform: rotate(-90deg);
+}
+
+.navigation .side-bar .menu-item.active span.text {
+  color: var(--aqua-green);
+  text-decoration: underline;
+}
+
+.navigation .side-bar .menu-item.active span.arrow {
+  transform: rotate(0deg);
+}
+
+.navigation .side-bar ul {
+  list-style: none;
+  max-height: 0px;
+  height: 100%;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.navigation .side-bar ul a {
+  color: var(--green);
+  transition: 0.5s;
+}
+
+.navigation .side-bar ul a.active {
+  color: var(--navy-blue);
+  text-decoration: underline;
+}
+
+.navigation .side-bar ul a:hover {
+  color: var(--aqua-green);
+}
+
+.navigation .side-bar ul.active {
+  max-height: 500px;
+}
+
 .navigation .content {
   width: calc(100vw - 475px);
   padding: 50px;
